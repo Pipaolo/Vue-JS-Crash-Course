@@ -13,14 +13,31 @@
   <body>
     <div id="app" class="container">
       <h1 style="text-align: center">{{count}}</h1>
-      <h4>Message: {{message}}</h4>
-      <input v-model="message" />
       <div class="button-row">
         <button v-on:click="increment">Increment</button>
         <button v-on:click="decrement">Decrement</button>
         <button v-on:click="reset">Reset</button>
       </div>
     </div>
-    <script src="./assets/js/index.js"></script>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          count: 0,
+          message: "Hello world",
+        },
+        methods: {
+          increment: function () {
+            this.count += 1;
+          },
+          decrement: function () {
+            this.count -= 1;
+          },
+          reset: function () {
+            this.count = 0;
+          },
+        },
+      });
+    </script>
   </body>
 </html>
