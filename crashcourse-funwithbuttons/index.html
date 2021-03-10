@@ -4,23 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Fun With Buttons</title>
 
-    <link href="./assets/styles/index.css" rel="stylesheet" />
     <!-- production version, optimized for size and speed -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   </head>
   <body>
     <div id="app" class="container">
-      <h1 style="text-align: center">{{count}}</h1>
-      <h4>Message: {{message}}</h4>
-      <input v-model="message" />
-      <div class="button-row">
-        <button v-on:click="increment">Increment</button>
-        <button v-on:click="decrement">Decrement</button>
-        <button v-on:click="reset">Reset</button>
+      <div>
+        <button v-on:click="showAlert">Show Alert Box</button>
       </div>
     </div>
-    <script src="./assets/js/index.js"></script>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        methods: {
+          showAlert: function () {
+            alert("Hello World!");
+          },
+        },
+      });
+    </script>
   </body>
 </html>
