@@ -18,10 +18,14 @@ body {
   justify-content: center;
 }
 
-.button-row {
+.alert-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1em;
+}
+
+.title {
+  font-size: 5rem;
 }
